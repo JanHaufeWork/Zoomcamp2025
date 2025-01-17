@@ -7,4 +7,4 @@ day = sys.argv[1]
 
 # Load the data
 
-print("Job finished successfully")
+print("Job finished successfully for day", day)
