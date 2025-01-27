@@ -25,6 +25,9 @@ df = next(df_iter)
 #create empty table 
 df.head(n=0).to_sql('yellow_taxi_data', con=engine, if_exists='replace')
 
+#write first iter
+df.to_sql('yellow_taxi_data', con=engine, if_exists='append')
+
 #filling in data
 n = 1
 for df in df_iter:
