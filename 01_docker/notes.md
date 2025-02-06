@@ -65,3 +65,22 @@ docker run -it \
     --db=ny_taxi \
     --table_name=ny_taxi \
     --url=${URL}
+
+# run docker compose
+docker compose up
+
+#detached mode to also down the composed dockers
+docker compose up -d
+docker compose down
+'''
+
+
+
+
+```mermaid
+test graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
