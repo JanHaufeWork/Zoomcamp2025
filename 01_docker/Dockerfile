@@ -1,8 +1,9 @@
 FROM python:latest
 
-RUN pip install pandas
+RUN apt-get update && apt-get install -y wget
+RUN pip install pandas sqlalchemy psycopg2
 
 WORKDIR /app
-COPY pipeline.py pipeline.py
+COPY loadNYdata.py loadNYdata.py
 
-ENTRYPOINT [ "python", "pipeline.py" ]
+ENTRYPOINT [ "python", "loadNYdata.py" ]
